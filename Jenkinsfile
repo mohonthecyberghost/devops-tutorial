@@ -9,16 +9,10 @@ node {
 
     
 
-    stage('Building image 1') {
-        script {
-          app = docker.build "/var/jenkins_home/workspace/devops-tutorial"
-      }
-    }
-
-    stage('Build image 2') {
+    stage('Build image ') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
-        app = docker.build("mohonthecyberghost/devops-tutorial:${env.BUILD_ID}")
+        app = docker.build("mohonthecyberghost/devops-tutorial")
     }
 
 
