@@ -10,10 +10,8 @@ node {
     
 
     stage('Building image 1') {
-      steps{
         script {
-          dockerImage = docker.build "mohonthecyberghost/devops-tutorial" + ":$BUILD_NUMBER"
-        }
+          app = docker.build "mohonthecyberghost/devops-tutorial" + ":$BUILD_NUMBER"
       }
     }
 
