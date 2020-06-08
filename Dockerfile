@@ -2,7 +2,7 @@
 FROM node:7-onbuild
 
 # set maintainer
-LABEL maintainer "roll1604@yahoo.com"
+LABEL maintainer "sazzad.cseofkuet@yahoo.com"
 
 # set a health check
 HEALTHCHECK --interval=5s \
