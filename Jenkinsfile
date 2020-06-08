@@ -7,19 +7,22 @@ node {
         checkout scm
     }
 
-    stage('Build image') {
-        /* This builds the actual image; synonymous to
-         * docker build on the command line */
-        app = docker.build("mohonthecyberghost/devops-tutorial:${env.BUILD_ID}")
-    }
+    
 
-    stage('Building image') {
+    stage('Building image 1') {
       steps{
         script {
           dockerImage = docker.build "mohonthecyberghost/devops-tutorial" + ":$BUILD_NUMBER"
         }
       }
     }
+
+    stage('Build image 2') {
+        /* This builds the actual image; synonymous to
+         * docker build on the command line */
+        app = docker.build("mohonthecyberghost/devops-tutorial:${env.BUILD_ID}")
+    }
+
 
     stage('Test image') {
         /* Ideally, we would run a test framework against our image.
