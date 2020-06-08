@@ -10,7 +10,6 @@ node {
     stage('Build image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
-        sh 'docker build mohonthecyberghost/devops-tutorial'
         app = docker.build("mohonthecyberghost/devops-tutorial")
     }
 
