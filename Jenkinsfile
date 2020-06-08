@@ -11,7 +11,7 @@ node {
 
     stage('Building image 1') {
         script {
-          app = docker.build "mohonthecyberghost/devops-tutorial" + ":$BUILD_NUMBER"
+          app = docker.build "/var/jenkins_home/workspace/devops-tutorial"
       }
     }
 
