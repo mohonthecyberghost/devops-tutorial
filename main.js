@@ -16,4 +16,4 @@ var server = http.createServer(function (request, response) {
 server.listen(8000);
 console.log("Server listening at http://127.0.0.1:8000/");
 
-// Added Endpoint
+// Added Endpoint for main.js
