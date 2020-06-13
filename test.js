@@ -1,3 +1,5 @@
+// Test Assert for init
+
 var assert = require('assert')
 
 function test() {
